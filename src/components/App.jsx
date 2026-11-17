@@ -1,15 +1,21 @@
-import React from "react";
-import blogData from "../data/blog";
+import Header from "./Header"
+import About from "./About";
+import ArticleList from "./ArticleList";
+import blogPost from "../data/blog";
 
-console.log(blogData);
-
-function App() {
+function App (){
   return (
     <div className="App">
-      You're on your own from here! Follow the deliverables; test things out in
-      the browser as you write your code; and good luck!
-    </div>
+      <Header name="Overracted" />
+      <About
+      image="https://via.placeholder.com/150"
+      about="Personal blog by Dan Abramov. I explain with words and code."
+      />
+      <ArticleList post={blogPost} />
+      </div>
   );
 }
+
+
 
 export default App;
